@@ -1,0 +1,203 @@
+
+:root {  
+    --pastel-pink: #FFD1DC;  
+    --pastel-blue: #AFDBD2;  
+    --pastel-yellow: #FDFD96;  
+    --pastel-green: #B0E57C;  
+    --pastel-purple: #CDC7E5;  
+    --pastel-orange: #FFB347;  
+    --border-radius: 15px;  
+    --button-radius: 25px;  
+    --card-radius: 20px;  
+    
+    /* Additional Color Variables */
+    --text-primary: #333;
+    --text-secondary: #5a5a5a;
+    --background-light: #f8f9fa;
+}
+
+/* Global Styles */
+body {  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Login Section */
+#loginSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#loginSection .card {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: var(--card-radius);
+}
+
+/* Admin Section */
+#adminSection {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: 2px solid var(--pastel-purple);
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--text-primary);
+    background-color: transparent;
+    border-bottom-color: var(--pastel-purple);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: var(--card-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--pastel-purple);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    border-radius: var(--border-radius);
+    border-color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--pastel-purple);
+    box-shadow: 0 0 0 0.25rem rgba(205, 199, 229, 0.25);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: var(--button-radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: var(--pastel-purple);
+    border-color: var(--pastel-purple);
+    color: var(--text-primary);
+}
+
+.btn-primary:hover {
+    background-color: color-mix(in srgb, var(--pastel-purple) 90%, black);
+    border-color: color-mix(in srgb, var(--pastel-purple) 90%, black);
+}
+
+.btn-danger {
+    background-color: var(--pastel-pink);
+    border-color: var(--pastel-pink);
+    color: var(--text-primary);
+}
+
+.btn-danger:hover {
+    background-color: color-mix(in srgb, var(--pastel-pink) 90%, black);
+    border-color: color-mix(in srgb, var(--pastel-pink) 90%, black);
+}
+
+/* Table Styles */
+.table {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--pastel-purple);
+    color: var(--text-primary);
+}
+
+.table th {
+    font-weight: 600;
+    border: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: var(--card-radius);
+    border: none;
+}
+
+.modal-header {
+    
+}
+
+.modal-footer {
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #adminSection {
+        padding: 15px;
+    }
+}
+
+/* Utility Classes */
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.bg-pastel-purple {
+    background-color: var(--pastel-purple) !important;
+}
+
+/* Search and Filter Inputs */
+#studentSearchInput, 
+#caseSearchInput, 
+#caseFilterType {
+    border-radius: var(--border-radius);
+}
+
+/* Action Buttons in Tables */
+.btn-action {
+    padding: 4px 8px;
+    margin: 0 2px;
+}
